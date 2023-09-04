@@ -1,0 +1,18 @@
+/*
+
+    - This code by ahmed ayob 
+
+*/
+@use '../../../base' as *;
+@use '../../../utils' as *;
+/*
+
+    =============== Col-1 ===============
+
+*/
+
+.value__col-1 {
+    @include Img-container;
+    margin-bottom: 2rem;
+    @include second-img;
+}

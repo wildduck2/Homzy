@@ -1,0 +1,38 @@
+/*
+
+    - This code by ahmed ayob 
+
+*/
+@use '../../base' as *;
+@use '../../utils' as *;
+/*
+
+    =============== Header Discktop Menu ===============
+
+*/
+
+.header__disktop-menu {
+    display: none;
+
+    @include mq(mq4) {
+        @include flex-center-center;
+        gap: 1rem;
+        text-transform: capitalize;
+
+        a {
+            color: var(--text-color-light);
+            color: var(--gray-color);
+            font-weight: 400;
+            transition: 0.4s;
+
+            &:hover {
+                color: var(--first-color-lighten);
+            }
+
+            &.active {
+                color: var(--first-color);
+                background-color: transparent;
+            }
+        }
+    }
+}

@@ -1,0 +1,32 @@
+/*
+
+    - This code by ahmed ayob 
+
+*/
+@use '../../base' as *;
+@use '../../utils' as *;
+/*
+
+    =============== BoilerPlate ===============
+
+*/
+
+.value {
+    &__container {
+        @include section;
+        @include container;
+        @include flex-center-center;
+        flex-direction: column;
+        row-gap: 3rem;
+
+        @include mq(mq3) {
+            flex-direction: row;
+            gap: 1rem;
+        }
+
+        @include mq(mq4) {
+            flex-direction: row;
+            gap: 7rem;
+        }
+    }
+}

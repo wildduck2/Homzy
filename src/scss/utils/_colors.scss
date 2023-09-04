@@ -1,0 +1,35 @@
+/*
+
+    - This code by ahmed ayob 
+
+*/
+
+/*
+
+    =============== Colors ===============
+
+*/
+
+:root {
+    --header-height: 3.5rem;
+
+    /*Color mode HSL(hue, saturation, lightness)*/
+    --first-color: #2949c7;
+    --first-color-alt: hsl(228, 66%, 47%);
+    --first-color-lighter: #3858d6;
+    --first-color-light: hsl(228, 62%, 59%);
+    --first-color-lighten: rgb(240, 243, 255);
+    --second-color: hsl(25, 83%, 53%);
+    --second-color: #f38532;
+    --title-color: hsl(228, 57%, 28%);
+    --title-color: #1f3e72;
+    --text-color: hsl(228, 15%, 50%);
+    --text-color-light: hsl(228, 12%, 75%);
+    --border-color: #dee2ee;
+    --border-color2: #fbfbff;
+    --gray-color: #7b7b7b;
+    --body-color: #fff;
+    --container-color: #fff;
+    --black-color: #1c1d20;
+    --box-shadow: 0 48px 48px -36px hsla(228, 66%, 45%, 0.192);
+}

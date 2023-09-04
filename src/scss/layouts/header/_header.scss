@@ -1,0 +1,79 @@
+/*
+
+    - This code by ahmed ayob 
+
+*/
+@use '../../base' as *;
+@use '../../utils' as *;
+/*
+
+    =============== Header ===============
+
+*/
+
+.header {
+    @include fixed-0;
+    width: 100%;
+    transition: 0.4s;
+    z-index: var(--z-fixed);
+
+    &__nav {
+        @include flex-center-between;
+        @include container;
+        height: clamp(
+            var(--header-height) + 0.5rem,
+            4vw,
+            calc(var(--header-height) + 1.5rem)
+        );
+
+        @include mq(mq4) {
+            height: calc(var(--header-height) + 2rem);
+        }
+    }
+
+    .nav__logo {
+        @include logo;
+
+        &::after {
+            transition: 0.4s;
+        }
+    }
+
+    /*===== header__swipe change color ======*/
+    &__swipe {
+        background-color: var(--body-color);
+        box-shadow: 0 1px 4px hsla(228, 4%, 15%, 0.1);
+
+        .nav__logo {
+            font-weight: var(--font-semi-bold);
+            color: var(--first-color);
+
+            &::after {
+                background: linear-gradient(
+                    to right,
+                    var(--second-color),
+                    var(--second-color)
+                );
+            }
+        }
+
+        .header__disktop-menu {
+            a:hover {
+                color: var(--first-color-lighter);
+            }
+        }
+    }
+
+    &__button {
+        display: none;
+
+        @include mq(mq4) {
+            display: inline-block;
+        }
+    }
+
+    &__last-div {
+        @include flex-center-center;
+        gap: 2.5rem;
+    }
+}

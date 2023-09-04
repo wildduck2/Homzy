@@ -1,0 +1,73 @@
+/*
+
+    - This code by ahmed ayob 
+
+*/
+@use '../../../base' as *;
+@use '../../../utils' as *;
+/*
+
+    =============== Col-2 ===============
+
+*/
+
+.footer__col-2 {
+    // @include grid-center-center;
+    display: grid;
+    grid-template-columns: repeat(2, max-content);
+    gap: 2.5rem;
+
+    @include mq(mq1) {
+        gap: 2.5rem 4rem;
+    }
+
+    @include mq(mq2) {
+        grid-template-columns: repeat(2, max-content);
+    }
+
+    @include mq(mq4) {
+        grid-template-columns: repeat(4, 1fr);
+        gap: 1.5rem;
+    }
+
+    h3 {
+        font-size: var(--h3-font-size);
+        margin-bottom: 1rem;
+
+        @include mq(mq4) {
+            margin-bottom: 1rem;
+        }
+    }
+
+    .col-2__links {
+        @include grid-align-items-center;
+        row-gap: 0.3rem;
+
+        a {
+            font-size: clamp(
+                var(--small-font-size),
+                3vw,
+                var(--h3-font-size) - 0.4rem
+            );
+            font-weight: var(--font-medium);
+            color: var(--text-color);
+            transition: 0.3s;
+            &:hover {
+                color: var(--title-color);
+            }
+        }
+    }
+
+    .col-2__social {
+        display: flex !important;
+        column-gap: 0.5rem;
+
+        svg path {
+            transition: 0.3s;
+        }
+
+        a:hover svg path {
+            fill: var(--title-color);
+        }
+    }
+}

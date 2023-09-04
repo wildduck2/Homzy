@@ -1,0 +1,62 @@
+/*
+
+    - This code by ahmed ayob 
+
+*/
+@use '../../base' as *;
+@use '../../utils' as *;
+/*
+
+    =============== Header Mobile Menu ===============
+
+*/
+
+.mobile__menu {
+    @include flex-center-center;
+    @include fixed-bottom;
+    gap: clamp(1.2rem, 4vw, 3rem);
+    width: 75%;
+    padding: clamp(0.3rem, 4vw, 0.6rem) clamp(1rem, 4vw, 1.5rem);
+    margin: 0 auto;
+    background-color: var(--container-color);
+    box-shadow: 0 8px 24px hsl(228deg 87.7% 43.88% / 22%);
+    border-radius: 10rem;
+    transition: 0.3s;
+
+    @include mq(mq2) {
+        width: 342px;
+    }
+
+    @include mq(mq4) {
+        display: none;
+    }
+
+    &-link {
+        @include flex-center-center;
+        padding: 0.45rem;
+        border-radius: 50%;
+        background-color: transparent;
+        transition: 0.4s;
+
+        & * {
+            pointer-events: none;
+        }
+
+        svg {
+            width: 20px;
+            height: 20px;
+
+            path {
+                fill: var(--black-color);
+            }
+        }
+
+        &.active {
+            background-color: var(--first-color);
+
+            svg path {
+                fill: var(--first-color-lighten);
+            }
+        }
+    }
+}

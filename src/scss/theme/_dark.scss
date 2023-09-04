@@ -1,0 +1,68 @@
+/*
+
+    - This code by ahmed ayob 
+
+*/
+
+/*
+
+    =============== Dark theme ===============
+
+*/
+
+/*========== 
+    Color changes in some parts of 
+    the website, in dark theme 
+==========*/
+.dark-theme .col-1__search-box,
+.dark-theme .nav-left,
+.dark-theme .nav-right {
+    border: 3px solid var(--border-color);
+}
+
+.dark-theme .header__nav,
+.dark-theme .col-2__img,
+.dark-theme .card__slider-card:hover,
+.dark-theme .value__col-1__img,
+.dark-theme .accordion-open,
+.dark-theme .accordion-open .value__item-icon,
+.dark-theme .value__item.accordion-open img,
+.dark-theme .contact__col-2__img,
+.dark-theme .contact__card-item:hover,
+.dark-theme .back__top {
+    box-shadow: none;
+}
+
+.dark-theme .value__col-1__orbe,
+.dark-theme .value__col-1__img,
+.dark-theme .value__item-header img,
+.dark-theme .contact__col-2__orbe,
+.dark-theme .contact__card-item-info img,
+.dark-theme .contact__card-button,
+.dark-theme .section__container {
+    background-color: var(--container-color);
+}
+
+.dark-theme .contact__card-button {
+    border-color: transparent;
+}
+
+.dark-theme .section__container {
+    border: 6px solid var(--border-color);
+}
+
+.dark-theme .section__container {
+    color: var(--text-color);
+}
+
+.dark-theme::-webkit-scrollbar {
+    background: hsl(228, 4%, 15%);
+}
+
+.dark-theme::-webkit-scrollbar-thumb {
+    background: hsl(228, 4%, 25%);
+}
+
+.dark-theme::-webkit-scrollbar-thumb:hover {
+    background: hsl(228, 4%, 35%);
+}

@@ -1,0 +1,41 @@
+/*
+
+    - This code by ahmed ayob 
+
+*/
+@use '../../../base' as *;
+@use '../../../utils' as *;
+/*
+
+    =============== Col-1 ===============
+
+*/
+
+.footer__col-1 {
+    &__logo {
+        @include logo;
+        color: var(--first-color);
+        display: inline-flex;
+        align-items: baseline;
+        margin-bottom: 0.75rem;
+
+        &::after {
+            background: linear-gradient(
+                to right,
+                var(--second-color),
+                var(--second-color)
+            );
+        }
+    }
+
+    &__description {
+        font-size: clamp(
+            var(--small-font-size),
+            2vw,
+            var(--small-font-size) + 0.2rem
+        );
+        font-weight: var(--font-medium);
+        color: var(--text-color);
+        transition: 0.3s;
+    }
+}

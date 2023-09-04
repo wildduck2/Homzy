@@ -1,0 +1,86 @@
+/*
+
+    - This code by ahmed ayob 
+
+*/
+@use '../../base' as *;
+@use '../../utils' as *;
+/*
+
+    =============== Button ===============
+
+*/
+
+.header__theme {
+    margin-top: 0.5rem;
+    cursor: pointer;
+    background: transparent;
+    transition: 0.3s ease-in;
+
+    .header__theme svg,
+    .sun,
+    .sun-dots,
+    #moon-mask > circle {
+        transition: 0.3s ease-in;
+    }
+
+    & svg {
+        stroke-linecap: round;
+        stroke-width: 1.5px;
+
+        stroke: var(--gray-color);
+
+        &:hover {
+            stroke: var(--first-color-light);
+        }
+    }
+
+    &.dark {
+        opacity: 1;
+
+        & .sun-and-moon {
+            animation: sun-moona 0.5s forwards linear;
+        }
+
+        & .sun {
+            fill: transparent;
+            animation: suna 0.5s forwards linear;
+        }
+
+        & .sun-dots {
+            animation: sun-dotsa 0.4s forwards linear;
+        }
+
+        & #moon-mask > circle {
+            animation: mask-circlea 0.4s forwards linear;
+        }
+    }
+
+    &.light {
+        & .sun-and-moon {
+            animation: sun-moonb 0.3s forwards linear;
+        }
+
+        & .sun {
+            fill: var(--gray-color);
+            stroke: var(--gray-color);
+            animation: sunb 0.3s forwards linear;
+            &:hover {
+                fill: var(--first-color-light);
+                stroke: var(--first-color-light);
+            }
+        }
+
+        & .sun-dots {
+            animation: sun-dotsb 0.3s forwards;
+        }
+
+        & #moon-mask > circle {
+            animation: mask-circleb 0.25s forwards linear 0.4s;
+        }
+
+        .light #moon-mask > rect {
+            fill: var(--gray-color);
+        }
+    }
+}

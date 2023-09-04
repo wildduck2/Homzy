@@ -1,0 +1,38 @@
+/*
+
+    - This code by ahmed ayob 
+
+*/
+@use '../../../base' as *;
+@use '../../../utils' as *;
+/*
+
+    =============== Col-2 ===============
+
+*/
+
+.col-2 {
+    @include flex-center-center;
+    @include Img-container;
+    margin-bottom: -2rem;
+
+    @include mq(mq3) {
+        align-self: self-end;
+        transform: translate(-71px, 0px);
+    }
+
+    @include mq(mq4) {
+        margin-bottom: -4rem;
+    }
+    &__orbe {
+        background: linear-gradient(
+            180deg,
+            hsl(0deg 0% 16% / 49%) 93%,
+            hsl(0deg 0.91% 17% / 42%) 100%
+        );
+    }
+
+    &__img {
+        @include flex-align-items-end;
+    }
+}

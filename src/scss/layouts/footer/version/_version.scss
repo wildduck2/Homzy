@@ -1,0 +1,42 @@
+/*
+
+    - This code by ahmed ayob 
+
+*/
+@use '../../../base' as *;
+@use '../../../utils' as *;
+/*
+
+    =============== Version ===============
+
+*/
+
+.version {
+    @include grid-center-center;
+    text-align: center;
+    font-size: clamp(
+        var(--smaller-font-size),
+        4vw,
+        var(--small-font-size) + 0.2rem
+    );
+    a {
+        font-size: clamp(
+            var(--smaller-font-size),
+            4vw,
+            var(--h3-font-size) - 0.3rem
+        );
+        font-weight: var(--font-medium);
+        color: var(--text-color);
+    }
+
+    &__privacy {
+        justify-content: center;
+        column-gap: 1.25rem;
+    }
+
+    @include mq(mq4) {
+        @include flex-center-between;
+        margin-top: 3rem;
+        // font-size: ;
+    }
+}

@@ -1,0 +1,28 @@
+/*
+
+    - This code by ahmed ayob 
+
+*/
+@use '../../base' as *;
+@use '../../utils' as *;
+/*
+
+    =============== Hero ===============
+
+*/
+
+.hero {
+    @include section;
+    background: linear-gradient(150deg, hsl(0, 0%, 22%) 0%, hsl(0, 0%, 6%) 40%);
+    padding-bottom: 0;
+
+    &__container {
+        @include container;
+        min-height: 80vh;
+
+        @include mq(mq3) {
+            @include flex-center-between;
+            // gap: 1rem;
+        }
+    }
+}

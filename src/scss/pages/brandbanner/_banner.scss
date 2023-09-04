@@ -1,0 +1,33 @@
+/*
+
+    - This code by ahmed ayob 
+
+*/
+@use '../../base' as *;
+@use '../../utils' as *;
+/*
+
+    =============== Banner ===============
+
+*/
+
+.banner {
+    @include flex-center-center;
+    flex-wrap: wrap;
+    grid-template-columns: 2fr 2fr;
+    gap: 2rem 3rem;
+    padding-block: 9rem 4rem;
+    place-items: center;
+
+    &__picture {
+        img {
+            width: clamp(138px, 25vw, 220px);
+            opacity: 0.3;
+            transition: 0.4s ease-out;
+
+            &:hover {
+                opacity: 0.9;
+            }
+        }
+    }
+}

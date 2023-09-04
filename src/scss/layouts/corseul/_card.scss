@@ -1,0 +1,82 @@
+/*
+
+- This code by ahmed ayob 
+
+*/
+@use '../../utils' as *;
+@use '../../base' as *;
+/*
+
+    =============== VARIABLES CSS ===============
+
+*/
+
+.card__slider-card {
+    @include grid-place-center;
+    width: 240px;
+    background-color: var(--container-color);
+    padding: 0.5rem;
+    padding-block-end: 0.75rem;
+    border-radius: 1rem;
+    margin: 0 auto;
+    cursor: grab;
+    transition: 0.4s;
+    scroll-snap-align: center;
+
+    @include mq(mq1) {
+        width: 276px;
+    }
+
+    @include mq(mq3) {
+        width: 310px;
+    }
+
+    &:hover {
+        box-shadow: var(--box-shadow);
+        transition: 0.4s;
+    }
+
+    .img__wrapper {
+        position: relative;
+        overflow: hidden;
+        border-radius: 1rem;
+        max-width: 310px;
+        max-height: 229.31px;
+        margin-bottom: clamp(0rem, 1vw, 1rem);
+        z-index: 2;
+
+        img {
+            height: 100%;
+            user-select: none;
+        }
+    }
+}
+
+.card__slider-info {
+    padding: 0 1rem 0 0.5rem;
+
+    h5 {
+        font-size: clamp(1rem, 4vw, 1.2rem);
+        color: var(--text-color);
+        margin-bottom: 0.25em;
+    }
+
+    h3 {
+        font-size: clamp(1rem, 2.4vw, 1.3rem);
+        margin-bottom: 0.3rem;
+    }
+
+    span {
+        color: var(--second-color);
+    }
+
+    p {
+        font-size: clamp(0.75rem, 4vw, 1rem);
+        margin-bottom: 0.65em;
+        color: var(--text-color);
+    }
+
+    @include mq(mq1) {
+        padding: 0 1rem 0 0.8rem;
+    }
+}

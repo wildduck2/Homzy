@@ -1,0 +1,71 @@
+/*
+
+    - This code by ahmed ayob 
+
+*/
+@use '../../../base' as *;
+@use '../../../utils' as *;
+/*
+
+    =============== Contacts ===============
+
+*/
+
+.contact__card-item {
+    background-color: var(--body-color);
+    border: 2px solid var(--border-color);
+
+    border-radius: 0.5rem;
+    padding: 1.25em 0.75rem;
+    transition: 0.3s;
+
+    &:hover {
+        box-shadow: 0 22px 57px -22px hsla(228, 66%, 45%, 0.192);
+
+        img {
+            box-shadow: 0 22px 57px -22px hsla(228, 66%, 45%, 0.192);
+        }
+    }
+
+    &-info {
+        display: flex;
+        align-items: flex-start;
+        column-gap: clamp(0.65rem, 2vw, 1rem);
+        margin-bottom: 0.8rem;
+
+        h3 {
+            font-size: clamp(0.9rem, 2.2vw, 1.2rem);
+        }
+
+        p {
+            font-size: 0.7rem;
+            font-size: clamp(0.7rem, 1.8vw, 1rem);
+        }
+    }
+
+    img {
+        padding: 6px;
+        background-color: var(--first-color-lighten);
+        border-radius: 6px;
+        width: clamp(30px, 6vw, 40px);
+    }
+
+    button {
+        display: inline-block;
+        font-size: clamp(0.7rem, 1.8vw, 1rem);
+        padding: 9px 0;
+        width: 100%;
+        border-radius: 0.25rem;
+        background: var(--first-color-lighten);
+        color: var(--first-color);
+        border: 1px solid var(--first-color-light);
+        font-weight: var(--font-semi-bold);
+        box-shadow: none;
+        transition: 0.4s ease;
+
+        &:hover {
+            background-color: var(--first-color);
+            color: #fff;
+        }
+    }
+}

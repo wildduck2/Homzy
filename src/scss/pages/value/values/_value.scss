@@ -1,0 +1,106 @@
+/*
+
+    - This code by ahmed ayob 
+
+*/
+@use '../../../base' as *;
+@use '../../../utils' as *;
+/*
+
+    =============== Values ===============
+
+*/
+
+.value__item {
+    background-color: var(--body-color);
+    border-radius: 0.5rem;
+    border: 4px solid var(--border-color2);
+    padding: 0.5rem 0.65rem;
+
+    @include mq(mq2) {
+        padding: clamp(0.6rem, 1vw, 1.2rem) clamp(0.6rem, 1vw, 1.2rem)
+            clamp(0.6rem, 1vw, 1.2rem) clamp(0.65rem, 1vw, 1rem);
+    }
+
+    &-header {
+        @include flex-align-items-center;
+        cursor: pointer;
+
+        .value__icon {
+            @include flex-center-center;
+            background-color: var(--body-color);
+            width: 28px;
+            height: 28px;
+            display: inline-flex;
+            padding: 0.5rem;
+            border-radius: 0.25rem;
+            margin-right: 0.5rem;
+            transition: 0.4s;
+        }
+    }
+
+    .value__item-arrow {
+        width: 20px;
+        height: 20px;
+
+        img {
+            width: 12px;
+            transition: 0.3s;
+        }
+    }
+
+    .value__item-icon {
+        img {
+            width: 22px;
+        }
+    }
+
+    &-title {
+        width: 100%;
+        font-size: clamp(0.68rem, 3.5vw, var(--normal-font-size));
+
+        @include mq(mq3) {
+            font-size: 0.8rem;
+        }
+    }
+
+    &-content {
+        overflow: hidden;
+        height: 0;
+        transition: all 0.35s ease;
+    }
+
+    &-description {
+        font-size: clamp(0.65rem, 4vw, var(--small-font-size));
+        padding: clamp(0.6rem, 1vw, 1.25rem) 2rem 0 2rem;
+
+        @include mq(mq3) {
+            padding-bottom: 1rem;
+        }
+    }
+
+    &.accordion-open {
+        box-shadow: 0 23px 48px -36px hsla(228, 66%, 45%, 0.192);
+
+        .value__item-icon {
+            box-shadow: 0 4px 4px hsla(228, 66%, 45%, 0.116);
+        }
+
+        .value__item-arrow {
+            box-shadow: 0 4px 4px hsla(228, 66%, 45%, 0.116);
+            img {
+                &:last-child {
+                    transform: rotate(-180deg);
+                }
+            }
+        }
+
+        .value__item-content {
+            height: 100px;
+        }
+    }
+}
+
+.dark-theme .value__item {
+    border: 4px solid var(--border-color);
+}

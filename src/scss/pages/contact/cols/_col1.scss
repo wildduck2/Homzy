@@ -1,0 +1,72 @@
+/*
+
+    - This code by ahmed ayob 
+
+*/
+@use '../../../base' as *;
+@use '../../../utils' as *;
+/*
+
+    =============== Col-1 ===============
+
+*/
+
+.contact__col-1 {
+    order: 1;
+    .section__title {
+        overflow: hidden;
+    }
+
+    &__discription {
+        max-width: 450px;
+        font-size: clamp(var(--small-font-size), 2vw, var(--normal-font-size));
+        margin-bottom: 3rem;
+        overflow: hidden;
+    }
+
+    .contact__card {
+        @include grid-align-items-center;
+        grid-template-columns: repeat(1, 180px);
+        gap: 1.1rem 0.5rem;
+
+        @include mq(mq1) {
+            grid-template-columns: repeat(2, 2fr);
+        }
+        @include mq(mq2) {
+            grid-template-columns: repeat(2, 190px);
+            row-gap: 1rem;
+        }
+        @include mq(mq4) {
+            grid-template-columns: repeat(2, 230px);
+            gap: 1.5rem;
+        }
+    }
+
+    @include mq(mq3) {
+        .section__title {
+            font-size: 1.5rem;
+        }
+
+        &__discription {
+            font-size: 0.9rem;
+        }
+    }
+
+    @include mq(mq3) {
+        .section__title {
+            font-size: clamp(
+                var(--h2-font-size),
+                4vw,
+                var(--h1-font-size) + 0.25rem
+            );
+        }
+
+        &__discription {
+            font-size: clamp(
+                var(--small-font-size),
+                2vw,
+                var(--normal-font-size)
+            );
+        }
+    }
+}

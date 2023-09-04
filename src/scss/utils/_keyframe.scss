@@ -1,0 +1,95 @@
+/*
+
+    - This code by ahmed ayob 
+
+*/
+@use '../base' as *;
+@use '../utils/colors' as *;
+/*
+
+    =============== Theme Toggle Animation ===============
+
+*/
+
+/* sun-dots */
+@keyframes sun-dotsa {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+@keyframes sun-dotsb {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+/* sun */
+@keyframes suna {
+    0% {
+        r: 10px;
+    }
+    80% {
+        r: 4px;
+    }
+    100% {
+        r: 5px;
+    }
+}
+@keyframes sunb {
+    0% {
+        r: 5px;
+    }
+    100% {
+        r: 10px;
+    }
+}
+/* sun-moon */
+@keyframes sun-moona {
+    0% {
+        transform: rotate(-50deg);
+    }
+    50% {
+        transform: rotate(10deg);
+    }
+    100% {
+        transform: rotate(0deg);
+    }
+}
+@keyframes sun-moonb {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(-50deg);
+    }
+}
+/* mask-circle */
+@keyframes mask-circlea {
+    0% {
+        cx: 20px;
+        cy: 17px;
+        r: 10px;
+    }
+    100% {
+        cx: 30px;
+        cy: 17px;
+        r: 6px;
+    }
+}
+@keyframes mask-circleb {
+    0% {
+        cx: 30px;
+        cy: 17px;
+        r: 6px;
+    }
+    100% {
+        cx: 20px;
+        cy: 17px;
+        r: 10px;
+    }
+}

@@ -1,0 +1,30 @@
+/*
+
+    - This code by ahmed ayob 
+
+*/
+@use '../../base' as *;
+@use '../../utils' as *;
+/*
+
+    =============== Contact ===============
+
+*/
+
+.contact {
+    &__container {
+        @include section;
+        @include container;
+        @include grid-align-items-center;
+        row-gap: 2rem;
+
+        @include mq(mq3) {
+            grid-template-columns: 1fr 1fr;
+            gap: 1rem;
+        }
+
+        @include mq(mq4) {
+            grid-template-columns: 1fr 1fr;
+        }
+    }
+}

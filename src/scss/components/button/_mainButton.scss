@@ -1,0 +1,35 @@
+/*
+
+    - This code by ahmed ayob 
+
+*/
+@use '../../base' as *;
+@use '../../utils' as *;
+/*
+
+    =============== Button ===============
+
+*/
+
+.button {
+    background: linear-gradient(
+        to left,
+        var(--first-color-lighter) 0%,
+        var(--first-color) 90%
+    );
+    border-radius: 8px;
+    padding: clamp(0.9rem, 2vw, 1rem) clamp(0.15rem, 3vw, 2rem);
+    color: #fff;
+    font-weight: var(--font-medium);
+    cursor: pointer;
+    transition: 0.3s;
+
+    &:hover {
+        background: linear-gradient(var(--first-color), var(--first-color));
+        box-shadow: 0 13px 28px hsla(228, 66%, 45%, 0.192);
+    }
+
+    @include mq(mq3) {
+        font-size: 1rem;
+    }
+}

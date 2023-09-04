@@ -1,0 +1,37 @@
+/*
+
+    - This code by ahmed ayob 
+
+*/
+@use '../../base' as *;
+@use '../../utils' as *;
+/*
+
+    =============== BoilerPlate ===============
+
+*/
+
+.back__top {
+    position: fixed;
+    right: 1rem;
+    bottom: -30%;
+    background-color: var(--container-color);
+    box-shadow: 0 8px 12px hsla(228, 66%, 45%, 0.1);
+    display: inline-flex;
+    padding: 0.35rem;
+    border-radius: 0.25rem;
+    z-index: var(--z-tooltip);
+    transition: 0.3s;
+    cursor: pointer;
+
+    &.show-scroll {
+        bottom: 5rem;
+    }
+
+    @include mq(mq4) {
+        &.show-scroll {
+            bottom: 3rem;
+            right: 3rem;
+        }
+    }
+}

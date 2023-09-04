@@ -1,0 +1,27 @@
+/*
+
+    - This code by ahmed ayob 
+
+*/
+@use '../../../base' as *;
+@use '../../../utils' as *;
+/*
+
+    =============== Col-2 ===============
+
+*/
+
+.contact__col-2 {
+    display: grid;
+
+    place-self: center;
+    @include Img-container;
+    margin-bottom: 2rem;
+    order: -1;
+
+    @include second-img;
+
+    @include mq(mq3) {
+        order: 1;
+    }
+}

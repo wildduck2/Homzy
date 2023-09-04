@@ -1,0 +1,29 @@
+/*
+
+    - This code by ahmed ayob 
+
+*/
+@use '../../base' as *;
+@use '../../utils' as *;
+/*
+
+    =============== Residence ===============
+
+*/
+
+.residence {
+    position: relative;
+
+    &__container {
+        @include section;
+        @include container;
+
+        & > div {
+            position: relative;
+        }
+
+        .residence__title {
+            overflow: hidden;
+        }
+    }
+}

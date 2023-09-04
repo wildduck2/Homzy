@@ -1,0 +1,35 @@
+/*
+
+    - This code by ahmed ayob 
+
+*/
+@use '../../base' as *;
+@use '../../utils' as *;
+/*
+
+    =============== Footer ===============
+
+*/
+
+.footer {
+    @include section;
+    @include container;
+    @include grid-center-center;
+    row-gap: 2.5rem;
+    margin-bottom: 15vh;
+    &__container {
+        row-gap: 2.5rem;
+        @include grid-center-center;
+
+        @include mq(mq3) {
+            align-items: start;
+            grid-template-columns: repeat(2, max-content);
+            justify-content: space-around;
+            gap: 2.5rem;
+        }
+
+        @include mq(mq4) {
+            gap: 16rem;
+        }
+    }
+}

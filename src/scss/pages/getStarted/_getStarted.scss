@@ -1,0 +1,71 @@
+/*
+
+    - This code by ahmed ayob 
+
+*/
+@use '../../base' as *;
+@use '../../utils' as *;
+/*
+
+    =============== Contact ===============
+
+*/
+
+.section {
+    padding: clamp(3.5rem, 1vw, 4.5rem) 0 clamp(1rem, 1vw, 2rem);
+
+    &__container {
+        @include section;
+        @include container;
+
+        background-color: var(--first-color);
+        padding: 2rem 1rem;
+        border-radius: 1.25rem;
+        border: 6px solid var(--first-color-light);
+        text-align: center;
+
+        &-title {
+            font-size: clamp(1.2rem, 3.5vw, 2.5rem);
+            color: #fff;
+            margin-bottom: 1rem;
+        }
+
+        &-description {
+            color: hsl(228, 90%, 92%);
+            font-size: var(--small-font-size);
+            font-size: clamp(
+                var(--small-font-size),
+                3.5vw,
+                var(--small-font-size) + 0.3rem
+            );
+            max-width: 70%;
+            margin: 0 auto 2rem auto;
+        }
+
+        &-button {
+            color: var(--first-color-lighten);
+            border: 2px solid #fff;
+            background-color: var(--first-color-light);
+            font-size: clamp(
+                var(--small-font-size),
+                3.5vw,
+                var(--small-font-size) + 0.3rem
+            );
+            padding: 0.5rem 1em;
+            border-radius: 6px;
+            transition: 0.4s;
+
+            &:hover {
+                background-color: var(--first-color);
+            }
+
+            @include mq(mq3) {
+                padding: 0.8rem 1.5rem;
+            }
+        }
+
+        @include mq(mq4) {
+            padding-bottom: 6.5rem;
+        }
+    }
+}

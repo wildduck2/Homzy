@@ -1,0 +1,180 @@
+/*
+
+    - This code by ahmed ayob 
+
+*/
+@use '../../../base' as *;
+@use '../../../utils' as *;
+/*
+
+    =============== Col-1 ===============
+
+*/
+
+.col-1 {
+    place-items: center;
+    padding-top: 3rem;
+    gap: 4rem;
+    z-index: 2;
+
+    span {
+        display: inline-block;
+    }
+
+    &__title {
+        font-size: var(--biggest-font-size);
+        color: #fff;
+        margin-bottom: clamp(1.1rem, 3vw, 3rem);
+
+        @include mq(mq3) {
+            font-size: calc(var(--biggest-font-size) + 1rem);
+            line-height: 4.5rem;
+        }
+
+        @include mq(mq4) {
+            font-size: var(--biggest-font-size);
+            line-height: 4.5rem;
+        }
+
+        .shape__wrapper {
+            position: relative;
+            z-index: 2;
+
+            .orange__shape {
+                position: absolute;
+                top: -2px;
+                right: -18px;
+                width: 30px;
+                height: 30px;
+                background: var(--second-color);
+                border-radius: 50%;
+                z-index: -1;
+
+                @include mq(mq4) {
+                    width: 45px;
+                    height: 45px;
+                    top: -2px;
+                    right: -30px;
+                }
+            }
+        }
+    }
+
+    &__discription {
+        color: var(--gray-color);
+        font-size: clamp(
+            var(--smaller-font-size),
+            4vw,
+            var(--smaller-font-size) + 0.2rem
+        );
+        margin-bottom: clamp(2rem, 1vw, 3.5rem);
+
+        span {
+            display: inline;
+        }
+
+        @include mq(mq4) {
+            span {
+                display: inline-block;
+            }
+        }
+    }
+
+    .form__wrapper {
+        position: relative;
+        z-index: 10;
+    }
+
+    &__search-box {
+        @include flex-center-between;
+        background-color: var(--body-color);
+        border-radius: clamp(6px, 1vw, 10px);
+        padding: 0.35rem 0.3rem 0.35rem 0.75rem;
+        margin-bottom: clamp(2rem, 1vw, 3rem);
+        border: 4px solid var(--border-color);
+        overflow: hidden;
+        z-index: 10;
+
+        @include mq(mq4) {
+            padding: 0.35rem 0.65rem 0.35rem 0.75rem;
+            width: 110%;
+        }
+
+        svg {
+            fill: var(--first-color);
+            width: 2.3rem;
+            padding-right: 0.2rem;
+
+            @include mq(mq4) {
+                width: clamp(1.8rem, 5vw, 3.3rem);
+            }
+        }
+
+        input {
+            padding-inline: 0.2rem;
+            background: transparent;
+            margin-right: 0.3rem;
+            width: 90%;
+            color: var(--text-color);
+            font-size: clamp(0.8rem, 2.5vw, 1.1rem);
+            transition: 0.3s;
+
+            &::placeholder {
+                color: var(--text-color);
+                color: #b4b7be;
+                font-size: clamp(0.8rem, 2.3vw, 1.2rem);
+                font-weight: var(--font-medium);
+            }
+        }
+
+        @include mq(mq3) {
+            padding: 0.45rem 0.75rem 0.45rem 0.85rem;
+            border-radius: 13px;
+        }
+
+        @include mq(mq4) {
+            padding: 0.3rem 0.5rem 0.3rem 1rem;
+        }
+
+        button {
+            padding: clamp(0.7rem, 2vw, 1rem) clamp(1.3rem, 3vw, 3rem);
+
+            @include mq(mq4) {
+                padding: clamp(0.9rem, 2vw, 1rem) clamp(0.15rem, 3vw, 3rem);
+            }
+        }
+    }
+
+    &__value-box {
+        @include flex-align-items-center;
+        column-gap: clamp(6%, 4vw, 2rem);
+        margin-bottom: clamp(2.5rem, 4vw, 4rem);
+
+        .value__title {
+            @include flex-align-items-center;
+            color: #fff;
+            font-size: clamp(
+                var(--h1-font-size),
+                4vw,
+                var(--h1-font-size) + 0.5rem
+            );
+            font-weight: var(--font-medium);
+            span {
+                color: var(--second-color);
+            }
+        }
+
+        .value__descrption {
+            color: var(--gray-color);
+            font-size: clamp(
+                var(--smaller-font-size),
+                4vw,
+                var(--smaller-font-size) + 0.2rem
+            );
+        }
+    }
+
+    .box {
+        width: 110px;
+    }
+}

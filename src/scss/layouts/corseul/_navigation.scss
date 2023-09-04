@@ -1,0 +1,41 @@
+@use '../../utils' as *;
+@use '../../base' as *;
+
+.slider-navigation {
+    @include flex-center-center;
+    position: absolute;
+    gap: 0.6rem;
+    bottom: -3rem;
+    right: 0.5rem;
+
+    @include mq(mq1) {
+        bottom: 0rem;
+    }
+
+    @include mq(mq3) {
+        bottom: 0rem;
+        right: 1rem;
+    }
+
+    .nav-left,
+    .nav-right {
+        @include grid-place-center;
+
+        width: 40px;
+        height: 40px;
+        border-radius: 18%;
+        background-color: var(--container-color);
+        border: 3px solid var(--border-color);
+        z-index: 20;
+        cursor: pointer;
+
+        & * {
+            pointer-events: none;
+        }
+
+        svg path {
+            pointer-events: none;
+            fill: var(--first-color);
+        }
+    }
+}

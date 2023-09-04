@@ -1,0 +1,58 @@
+/*
+
+    - This code by ahmed ayob 
+
+*/
+@use '../../../base' as *;
+@use '../../../utils' as *;
+/*
+
+    =============== Col-2 ===============
+
+*/
+
+.value__col-2 {
+    .section__title,
+    .value__col-2__discription {
+        overflow: hidden;
+    }
+
+    &__discription {
+        max-width: 450px;
+        font-size: clamp(var(--small-font-size), 2vw, var(--normal-font-size));
+        margin-bottom: 3rem;
+    }
+
+    .value__Values {
+        @include grid-align-items-center;
+        row-gap: 1.5rem;
+    }
+
+    @include mq(mq3) {
+        .section__title {
+            font-size: 1.5rem;
+        }
+
+        &__discription {
+            font-size: 0.9rem;
+        }
+    }
+
+    @include mq(mq4) {
+        .section__title {
+            font-size: clamp(
+                var(--h2-font-size),
+                4vw,
+                var(--h1-font-size) + 0.25rem
+            );
+        }
+
+        &__discription {
+            font-size: clamp(
+                var(--small-font-size),
+                2vw,
+                var(--normal-font-size)
+            );
+        }
+    }
+}
