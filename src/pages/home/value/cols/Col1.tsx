@@ -1,3 +1,5 @@
+import { valuee } from '../../../../assets'
+
 export const Col1 = () => {
     return (
         <>
@@ -6,7 +8,7 @@ export const Col1 = () => {
                 <div>
                     <img
                         className='value__col-1__img'
-                        src='/src/assets/img/value.jpg'
+                        src={valuee}
                         alt='building img'
                     />
                 </div>

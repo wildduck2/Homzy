@@ -1,3 +1,5 @@
+import { home } from '../../../../assets'
+
 export const Col2 = () => {
     return (
         <>
@@ -6,7 +8,7 @@ export const Col2 = () => {
 
                 <div className='col-2__img'>
                     <img
-                        src='./src/assets/img/home.jpg'
+                        src={home}
                         alt='building img'
                         draggable={false}
                     />
