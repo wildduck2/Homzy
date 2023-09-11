@@ -94,6 +94,7 @@
         border: 4px solid var(--border-color);
         overflow: hidden;
         z-index: 10;
+        transition: 0.3s;
 
         @include mq(mq4) {
             padding: 0.35rem 0.65rem 0.35rem 0.75rem;

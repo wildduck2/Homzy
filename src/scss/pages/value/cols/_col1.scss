@@ -15,4 +15,8 @@
     @include Img-container;
     margin-bottom: 2rem;
     @include second-img;
+
+    .value__col-1__orbe {
+        transition: 0.3s;
+    }
 }

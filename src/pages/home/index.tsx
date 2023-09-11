@@ -6,10 +6,12 @@ import { Banner } from './banner/Banner'
 import { Contact } from './contact/Contact'
 import { GetStart } from './getStart/GetStart'
 import { Hero } from './hero/Hero'
+import { Loader } from '../../components/loader'
 
 export const Home = () => {
     return (
         <>
+            <Loader />
             <Header />
             <main>
                 <Hero />

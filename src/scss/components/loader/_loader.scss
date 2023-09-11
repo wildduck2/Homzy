@@ -1,0 +1,39 @@
+/*
+
+    - This code by ahmed ayob 
+
+*/
+@use '../../base' as *;
+@use '../../utils' as *;
+
+/*
+
+    =============== Loader ===============
+
+*/
+
+.loader {
+    position: fixed;
+    display: grid;
+    place-content: center;
+    width: 100%;
+    height: 100%;
+    z-index: 200;
+
+    background-color: var(--black-color);
+
+    .loader__wrapper {
+        display: flex;
+        font-size: calc(var(--h1-font-size) + 0.5rem);
+        font-weight: var(--font-semi-bold);
+        letter-spacing: 2px;
+
+        color: var(--container-color);
+
+        overflow: hidden;
+
+        .loader__char {
+            display: none;
+        }
+    }
+}
