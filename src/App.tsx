@@ -9,15 +9,15 @@ export const App = () => {
             <BackTop />
             <Routes>
                 <Route
-                    path='/'
+                    path='/Homzy/'
                     element={<Home />}
                 />
                 <Route
-                    path='/about'
+                    path='/Homzy/about'
                     element={<h1>details</h1>}
                 />
                 <Route
-                    path='*'
+                    path='/Homzy/*'
                     element={<Error />}
                 />
             </Routes>
