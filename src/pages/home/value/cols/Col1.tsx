@@ -6,7 +6,7 @@ export const Col1 = () => {
                 <div>
                     <img
                         className='value__col-1__img'
-                        src='/src/assets/img/value.jpg'
+                        src='./src/assets/img/value.jpg'
                         alt='building img'
                     />
                 </div>

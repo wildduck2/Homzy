@@ -36,7 +36,7 @@ export const ValueItem = ({ title, discription, tagImg }: valueItemType) => {
                     <h3 className='value__item-title'>{title}</h3>
                     <div className='value__item-arrow value__icon'>
                         <img
-                            src='/src/assets/svg/bxs-down-arrow.svg'
+                            src='./src/assets/svg/bxs-down-arrow.svg'
                             alt='arrow'
                         />
                     </div>
