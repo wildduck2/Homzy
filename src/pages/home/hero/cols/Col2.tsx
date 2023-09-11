@@ -6,7 +6,7 @@ export const Col2 = () => {
 
                 <div className='col-2__img'>
                     <img
-                        src='./src/assets/img/home.jpg'
+                        src='/src/assets/img/home.jpg'
                         alt='building img'
                         draggable={false}
                     />
