@@ -7,7 +7,7 @@
 [Project Description]
 
 - **Tech Stack:** REACT, SCSS, TypeScript, GSAP, Redux
-- **GitHub Repository:** [Link](https://github.com/thecoder512/Homzy.com)
+- **GitHub Repository:** [Link](https://github.com/thecoder512/Homzy)
 - **Live Demo:** [Link](https://hhomzy.vercel.app/)
 
 ## Contact
